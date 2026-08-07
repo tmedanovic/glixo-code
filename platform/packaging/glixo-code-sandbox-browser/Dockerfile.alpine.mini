@@ -1,0 +1,10 @@
+# Minimal Alpine guest for container2wasm - BusyBox terminal + filesystem only.
+# For marketplace demo iframes and fast WASM boot (no git/rg/node/npm/bash).
+# Full toolchain image: Dockerfile.alpine → glixo-alpine-c2w
+FROM alpine:3.20
+
+WORKDIR /workspace
+
+RUN printf '%s\n' '# glixo-alpine-mini-c2w' 'Minimal browser sandbox workspace.' > README.md
+
+CMD ["/bin/sh"]

@@ -1,0 +1,4 @@
+starter/node_modules
+starter/dist
+starter/.vite
+npm-debug.log*

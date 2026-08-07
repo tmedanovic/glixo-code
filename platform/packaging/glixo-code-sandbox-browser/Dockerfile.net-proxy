@@ -1,0 +1,18 @@
+ARG C2W_VERSION=v0.8.4
+
+FROM golang:1.25-alpine AS build
+ARG C2W_VERSION
+RUN apk add --no-cache git
+WORKDIR /src
+RUN git clone --depth 1 --branch "${C2W_VERSION}" https://github.com/container2wasm/container2wasm.git container2wasm
+RUN cd /src/container2wasm/extras/c2w-net-proxy && go mod download
+COPY network-proxy/glixo_preview.go /src/glixo_preview.go
+RUN cp /src/glixo_preview.go /src/container2wasm/extras/c2w-net-proxy/glixo_preview.go \
+    && cd /src/container2wasm \
+    && awk 'index($0, "vn, err := gvnvirtualnetwork.New(config)") { ready = 1 } ready && /^[[:space:]]*}$/ { print; print ""; print "    go servePreviewRequests(vn)"; ready = 0; next } { print }' extras/c2w-net-proxy/main.go > extras/c2w-net-proxy/main.go.tmp \
+    && mv extras/c2w-net-proxy/main.go.tmp extras/c2w-net-proxy/main.go \
+    && cd extras/c2w-net-proxy \
+    && GOOS=wasip1 GOARCH=wasm go build -trimpath -ldflags='-s -w' -o /out/c2w-net-proxy.wasm .
+
+FROM busybox:1.37.0-musl
+COPY --from=build /out/c2w-net-proxy.wasm /c2w-net-proxy.wasm

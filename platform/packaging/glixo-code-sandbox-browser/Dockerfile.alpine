@@ -1,0 +1,25 @@
+# Alpine-based Linux sandbox for browser container2wasm — tag glixo-alpine-c2w:<version>
+# Minimal terminal-only variant: Dockerfile.alpine.mini → glixo-alpine-mini-c2w:<version>
+FROM alpine:3.20
+
+RUN apk add --no-cache \
+    git \
+    ripgrep \
+    nodejs \
+    npm \
+    bash \
+    curl \
+    ca-certificates \
+    coreutils \
+    findutils
+
+WORKDIR /workspace
+ENV PATH="/workspace/node_modules/.bin:${PATH}"
+
+COPY starter/package*.json ./
+RUN npm ci --no-audit --no-fund \
+    && npm cache clean --force
+
+COPY starter/ ./
+
+CMD ["/bin/bash"]
