@@ -10,7 +10,7 @@ Glixo Code is a cross-platform, cross-device, multi-provider agentic coding envi
 
 This repository is the public staging point for Glixo Code source releases. Selected, reviewed parts of the private development monorepo will be published here incrementally alongside a technical article series.
 
-The complete product is **not open source today**. This repository currently contains no product source and is not yet accepting contributions.
+The complete product is **not open source today**. Glixo Code is being published incrementally from a private development monorepo: this repository currently contains selected reviewed source paths (starting with the browser-sandbox Docker definitions) and is **not yet a standalone build** of the complete product. Additional components will be added over time. It is not yet accepting contributions.
 
 ## License
 
