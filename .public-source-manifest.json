@@ -2,8 +2,8 @@
   "schemaVersion": 1,
   "generator": "scripts/public-source",
   "sourceRepository": "gitlab.com/tmedanovic/glixo",
-  "sourceCommit": "9659dce8152a5211efebcaca8f9090699525ff47",
-  "publishedAt": "2026-08-26T13:52:22.830Z",
+  "sourceCommit": "150ef5121a791b3a35b16dcdd8f16522765601be",
+  "publishedAt": "2026-09-01T18:33:17.147Z",
   "managedFiles": [
     "platform/packaging/glixo-code-sandbox-browser/.dockerignore",
     "platform/packaging/glixo-code-sandbox-browser/Dockerfile",
@@ -13,8 +13,8 @@
   ],
   "fileHashes": {
     "platform/packaging/glixo-code-sandbox-browser/.dockerignore": "514b957f368e12114c8e4f9bbca8e71522d4ddc70c48eb3ca3a1da47ccd9de26",
-    "platform/packaging/glixo-code-sandbox-browser/Dockerfile": "06f7aa0886ac7a295b125a519283049db194b2de8eceafd16c6b758350d8b8be",
-    "platform/packaging/glixo-code-sandbox-browser/Dockerfile.alpine": "cc61c34c8cceb3c78ee25f398ecde886d9ba24bcd80335f40da4c51fb15ddd57",
+    "platform/packaging/glixo-code-sandbox-browser/Dockerfile": "4f289e3c1328188857cb3e60c093e2896e1c5673de19d67682464358349e8a1c",
+    "platform/packaging/glixo-code-sandbox-browser/Dockerfile.alpine": "edce23ea11e3dc62c84eca4cc4310637e599c9a1e338fa7844fc30cae0364236",
     "platform/packaging/glixo-code-sandbox-browser/Dockerfile.alpine.mini": "b573d13cdd4da1d4791f4eec2fe58b6627c76c8e0655d84a1ddcd835c54020c1",
     "platform/packaging/glixo-code-sandbox-browser/Dockerfile.net-proxy": "43b40b8a5639ae7a12737b1927465f1ae13f06493137d2acd036ac18b1c45804"
   }
