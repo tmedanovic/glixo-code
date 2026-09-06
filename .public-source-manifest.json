@@ -2,8 +2,8 @@
   "schemaVersion": 1,
   "generator": "scripts/public-source",
   "sourceRepository": "gitlab.com/tmedanovic/glixo",
-  "sourceCommit": "007727f571c4a4186e43f2de1433707f8aabd66c",
-  "publishedAt": "2026-09-05T07:47:00.825Z",
+  "sourceCommit": "475994851312634d803bb385712139fd45b856f2",
+  "publishedAt": "2026-09-06T11:11:10.438Z",
   "managedFiles": [
     "platform/packaging/glixo-code-sandbox-browser/.dockerignore",
     "platform/packaging/glixo-code-sandbox-browser/Dockerfile",
